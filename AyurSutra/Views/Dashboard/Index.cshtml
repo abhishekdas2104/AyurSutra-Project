@@ -1,0 +1,204 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Admin Dashboard - AyurSutra";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyurSutra | Admin Dashboard</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+
+<body class="bg-[#f5f6f0] text-[#263c2d]">
+
+    <div class="flex min-h-screen">
+
+        <!-- Sidebar -->
+        <aside class="w-64 bg-[#285b3b] text-white p-6 hidden md:flex flex-col">
+
+            <a href="/Home/Index" class="text-2xl font-bold mb-12">AyurSutra</a>
+
+            <p class="text-xs uppercase tracking-widest text-[#c4d7c5] mb-4">
+                Management
+            </p>
+
+            <nav class="space-y-3">
+                <a href="/Dashboard/Index" class="block bg-[#3b7650] px-4 py-3 rounded-lg">
+                    Dashboard
+                </a>
+
+                <a href="/Patients/Index" class="block px-4 py-3 rounded-lg hover:bg-[#3b7650]">
+                    Patients
+                </a>
+
+                <a href="/Doctors/Index" class="block px-4 py-3 rounded-lg hover:bg-[#3b7650]">
+                    Doctors
+                </a>
+
+                <a href="/Therapies/Index" class="block px-4 py-3 rounded-lg hover:bg-[#3b7650]">
+                    Therapies
+                </a>
+
+                <a href="/Appointments/Index" class="block px-4 py-3 rounded-lg hover:bg-[#3b7650]">
+                    Appointments
+                </a>
+
+                <a href="/TreatmentRecords/Index" class="block px-4 py-3 rounded-lg hover:bg-[#3b7650]">
+                    Treatment Records
+                </a>
+            </nav>
+
+            <div class="mt-auto pt-8">
+                <a href="/Account/Logout"
+                   class="block text-center bg-white text-[#285b3b] py-3 rounded-lg font-semibold hover:bg-gray-100">
+                    Logout
+                </a>
+            </div>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 md:p-10">
+
+            <div class="flex flex-wrap justify-between items-center gap-4 mb-10">
+                <div>
+                    <p class="text-sm text-gray-500">Management Panel</p>
+                    <h1 class="text-3xl md:text-4xl mt-1">Dashboard</h1>
+                    <p class="text-gray-500 mt-2">
+                        Welcome back, Administrator!
+                    </p>
+                </div>
+
+                <a href="/Account/Logout"
+                   class="md:hidden bg-[#285b3b] text-white px-5 py-2 rounded-lg">
+                    Logout
+                </a>
+            </div>
+
+            <!-- Statistics -->
+            <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6 mb-10">
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <p class="text-gray-500 text-sm">Total Patients</p>
+                    <h2 class="text-4xl font-bold mt-3 text-[#285b3b]">
+                        @ViewBag.TotalPatients
+                    </h2>
+                    <p class="text-xs text-gray-400 mt-2">Registered patients</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <p class="text-gray-500 text-sm">Total Doctors</p>
+                    <h2 class="text-4xl font-bold mt-3 text-[#285b3b]">
+                        @ViewBag.TotalDoctors
+                    </h2>
+                    <p class="text-xs text-gray-400 mt-2">Available doctors</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <p class="text-gray-500 text-sm">Total Therapies</p>
+                    <h2 class="text-4xl font-bold mt-3 text-[#285b3b]">
+                        @ViewBag.TotalTherapies
+                    </h2>
+                    <p class="text-xs text-gray-400 mt-2">Available treatments</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <p class="text-gray-500 text-sm">Total Appointments</p>
+                    <h2 class="text-4xl font-bold mt-3 text-[#285b3b]">
+                        @ViewBag.TotalAppointments
+                    </h2>
+                    <p class="text-xs text-gray-400 mt-2">Scheduled appointments</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <p class="text-gray-500 text-sm">Pending Appointments</p>
+                    <h2 class="text-4xl font-bold mt-3 text-orange-600">
+                        @ViewBag.PendingAppointments
+                    </h2>
+                    <p class="text-xs text-gray-400 mt-2">Awaiting confirmation or action</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <p class="text-gray-500 text-sm">Completed Treatments</p>
+                    <h2 class="text-4xl font-bold mt-3 text-green-700">
+                        @ViewBag.CompletedTreatments
+                    </h2>
+                    <p class="text-xs text-gray-400 mt-2">Successfully completed treatments</p>
+                </div>
+
+            </div>
+
+            <!-- Quick Actions -->
+            <section class="bg-white p-7 rounded-xl shadow-sm">
+
+                <h2 class="text-2xl mb-2">Quick Overview</h2>
+
+                <p class="text-gray-500 mb-6">
+                    Manage the daily operations of AyurSutra from one place.
+                </p>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                    <a href="/Patients/Index" class="border border-gray-100 p-5 rounded-lg hover:shadow-md transition">
+                        <h3 class="font-semibold text-lg">Patient Management</h3>
+                        <p class="text-sm text-gray-500 mt-2">
+                            Register and manage patient information.
+                        </p>
+                    </a>
+
+                    <a href="/Doctors/Index" class="border border-gray-100 p-5 rounded-lg hover:shadow-md transition">
+                        <h3 class="font-semibold text-lg">Doctor Management</h3>
+                        <p class="text-sm text-gray-500 mt-2">
+                            Maintain doctor profiles and details.
+                        </p>
+                    </a>
+
+                    <a href="/Therapies/Index" class="border border-gray-100 p-5 rounded-lg hover:shadow-md transition">
+                        <h3 class="font-semibold text-lg">Therapy Management</h3>
+                        <p class="text-sm text-gray-500 mt-2">
+                            Manage available Panchakarma therapies.
+                        </p>
+                    </a>
+
+                    <a href="/Appointments/Index" class="border border-gray-100 p-5 rounded-lg hover:shadow-md transition">
+                        <h3 class="font-semibold text-lg">Appointment Scheduling</h3>
+                        <p class="text-sm text-gray-500 mt-2">
+                            Schedule and track patient appointments.
+                        </p>
+                    </a>
+
+                    <a href="/TreatmentRecords/Index" class="border border-gray-100 p-5 rounded-lg hover:shadow-md transition">
+                        <h3 class="font-semibold text-lg">Treatment Records</h3>
+                        <p class="text-sm text-gray-500 mt-2">
+                            Maintain patient treatment history.
+                        </p>
+                    </a>
+
+                </div>
+            </section>
+
+            <footer class="text-center text-sm text-gray-400 mt-10">
+                © 2026 AyurSutra. All Rights Reserved.
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>

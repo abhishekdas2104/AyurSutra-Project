@@ -1,0 +1,163 @@
+﻿@{
+    ViewData["Title"] = "Our Doctors";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Doctors | AyurSutra</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: #263d32;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+
+<body class="bg-[#faf9f5]">
+
+    <!-- Navbar -->
+    <nav class="bg-white px-6 py-5 shadow-sm">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="/Home/Index" class="text-2xl font-bold text-[#285943]">AyurSutra</a>
+
+            <div class="flex flex-wrap gap-6 text-sm font-medium">
+                <a href="/Home/Index">Home</a>
+                <a href="/Home/About">About Us</a>
+                <a href="/Home/Therapies">Therapies</a>
+                <a href="/Home/Doctors" class="text-[#285943]">Our Doctors</a>
+                <a href="/Home/Contact">Contact Us</a>
+                <a href="/Account/Login">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-[#e9f0e8] py-20 px-6 text-center">
+        <p class="text-sm uppercase tracking-[3px] text-[#66816b] mb-4">
+            Experienced Care
+        </p>
+
+        <h1 class="text-4xl md:text-6xl font-semibold text-[#285943] mb-6">
+            Meet Our Ayurvedic Doctors
+        </h1>
+
+        <p class="max-w-2xl mx-auto text-gray-600 leading-8">
+            Get to know the practitioners who guide patients through
+            personalized Ayurvedic care and Panchakarma therapies.
+        </p>
+    </section>
+
+    <!-- Introduction -->
+    <section class="max-w-4xl mx-auto px-6 py-16 text-center">
+        <h2 class="text-3xl md:text-4xl text-[#285943] mb-5">
+            Care Guided by Knowledge and Experience
+        </h2>
+
+        <p class="text-gray-600 leading-8">
+            Our platform helps maintain doctor information, specializations
+            and appointments in one organized place. Doctor profiles and
+            their details can be managed by authorized staff.
+        </p>
+    </section>
+
+    <!-- Doctor Profiles -->
+    <section class="max-w-7xl mx-auto px-6 pb-20">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="bg-[#e9f0e8] h-56 flex items-center justify-center">
+                    <div class="w-28 h-28 rounded-full bg-[#d3e2d3] flex items-center justify-center text-5xl">
+                        👨‍⚕️
+                    </div>
+                </div>
+                <div class="p-7 text-center">
+                    <h3 class="text-2xl text-[#285943] mb-2">Ayurvedic Physician</h3>
+                    <p class="text-sm text-[#789078] mb-4">Panchakarma Specialist</p>
+                    <p class="text-gray-600 leading-7">
+                        Focuses on traditional Ayurvedic treatment planning
+                        and patient assessment.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="bg-[#e9f0e8] h-56 flex items-center justify-center">
+                    <div class="w-28 h-28 rounded-full bg-[#d3e2d3] flex items-center justify-center text-5xl">
+                        👩‍⚕️
+                    </div>
+                </div>
+                <div class="p-7 text-center">
+                    <h3 class="text-2xl text-[#285943] mb-2">Wellness Consultant</h3>
+                    <p class="text-sm text-[#789078] mb-4">Ayurvedic Wellness</p>
+                    <p class="text-gray-600 leading-7">
+                        Supports personalized wellness planning and
+                        traditional lifestyle guidance.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="bg-[#e9f0e8] h-56 flex items-center justify-center">
+                    <div class="w-28 h-28 rounded-full bg-[#d3e2d3] flex items-center justify-center text-5xl">
+                        👨‍⚕️
+                    </div>
+                </div>
+                <div class="p-7 text-center">
+                    <h3 class="text-2xl text-[#285943] mb-2">Therapy Specialist</h3>
+                    <p class="text-sm text-[#789078] mb-4">Therapy Management</p>
+                    <p class="text-gray-600 leading-7">
+                        Focuses on therapy coordination and treatment
+                        session planning.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="text-center text-sm text-gray-500 mt-8">
+            These are sample profiles for demonstration. Actual doctor
+            information will be managed through the admin dashboard.
+        </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-[#e9f0e8] py-16 px-6 text-center">
+        <h2 class="text-3xl md:text-4xl text-[#285943] mb-5">
+            Need Assistance?
+        </h2>
+
+        <p class="text-gray-600 mb-8">
+            Contact us to learn more about our Ayurvedic care services.
+        </p>
+
+        <a href="/Home/Contact"
+           class="inline-block bg-[#285943] text-white px-8 py-3 rounded-lg hover:bg-[#1d4431] transition">
+            Contact Us
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#234b38] text-white text-center py-10 px-6">
+        <h2 class="text-2xl font-semibold mb-3">AyurSutra</h2>
+        <p class="text-sm text-gray-200 mb-4">
+            Traditional Healing. Natural Wellness.
+        </p>
+        <p class="text-xs text-gray-300">
+            &copy; 2026 AyurSutra. All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

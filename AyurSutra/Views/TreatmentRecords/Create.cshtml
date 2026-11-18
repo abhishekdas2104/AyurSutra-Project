@@ -1,0 +1,106 @@
+﻿@using Microsoft.AspNetCore.Mvc.Rendering
+@model AyurSutra.Models.TreatmentRecord
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Add Treatment Record";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Treatment Record - AyurSutra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#f7f8f2] text-gray-800">
+
+    <div class="min-h-screen flex items-center justify-center p-6">
+
+        <div class="bg-white w-full max-w-2xl rounded-2xl shadow-lg p-8">
+
+            <div class="mb-8">
+                <a href="/TreatmentRecords/Index" class="text-[#315b47] hover:underline">
+                    ← Back to Treatment Records
+                </a>
+
+                <h1 class="text-3xl font-bold text-[#183c2e] mt-5">Add Treatment Record</h1>
+                <p class="text-gray-500 mt-2">Enter the patient's treatment details.</p>
+            </div>
+
+            <form method="post" action="/TreatmentRecords/Create" class="space-y-5">
+
+                @Html.AntiForgeryToken()
+
+                <div asp-validation-summary="All" class="text-red-600 text-sm"></div>
+
+                <div>
+                    <label class="block font-medium mb-2">Select Patient</label>
+                    <select name="PatientId" required
+                            class="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-green-600">
+                        <option value="">-- Select Patient --</option>
+                        @foreach (var patient in (IEnumerable<SelectListItem>)ViewBag.Patients)
+                        {
+                            <option value="@patient.Value">@patient.Text</option>
+                        }
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block font-medium mb-2">Select Therapy</label>
+                    <select name="TherapyId" required
+                            class="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-green-600">
+                        <option value="">-- Select Therapy --</option>
+                        @foreach (var therapy in (IEnumerable<SelectListItem>)ViewBag.Therapies)
+                        {
+                            <option value="@therapy.Value">@therapy.Text</option>
+                        }
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block font-medium mb-2">Treatment Date</label>
+                    <input type="date" name="TreatmentDate"
+                           value="@(Model?.TreatmentDate == default ? DateTime.Today.ToString("yyyy-MM-dd") : Model.TreatmentDate.ToString("yyyy-MM-dd"))"
+                           required
+                           class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-600">
+                </div>
+
+                <div>
+                    <label class="block font-medium mb-2">Treatment Status</label>
+                    <select name="Status"
+                            class="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-green-600">
+                        <option value="Completed">Completed</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Pending">Pending</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block font-medium mb-2">Observations</label>
+                    <textarea name="Observations" rows="4"
+                              placeholder="Enter treatment observations..."
+                              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-600">@Model?.Observations</textarea>
+                </div>
+
+                <div class="flex gap-4 pt-4">
+                    <button type="submit"
+                            class="flex-1 bg-[#315b47] text-white py-3 rounded-lg hover:bg-[#183c2e] font-medium">
+                        Save Treatment Record
+                    </button>
+
+                    <a href="/TreatmentRecords/Index"
+                       class="flex-1 text-center border border-gray-300 py-3 rounded-lg hover:bg-gray-100">
+                        Cancel
+                    </a>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>

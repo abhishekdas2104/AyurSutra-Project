@@ -1,0 +1,470 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "AyurSutra | Panchakarma & Wellness";
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <style>
+        @@layer base {
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main > :first-child {
+                margin-top: 0 !important;
+            }
+
+            main > :last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }</style>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'surface-bright': '#f6fbf3', 'error': '#ba1a1a', 'on-secondary-fixed-variant': '#2b4f2e', 'outline-variant': '#c1c8c1', 'outline': '#717973', 'on-surface-variant': '#414943', 'primary-fixed': '#c0edd1', 'on-primary': '#ffffff', 'surface-container-high': '#e5eae2', 'on-surface': '#181d18', 'inverse-on-surface': '#eef2ea', 'primary': '#093422', 'inverse-primary': '#a5d0b6', 'surface-container': '#ebefe7', 'secondary-fixed-dim': '#a8d1a6', 'secondary-container': '#c1eabe', 'tertiary-fixed': '#d6e8cd', 'tertiary-container': '#384734', 'secondary-fixed': '#c4edc0', 'on-error': '#ffffff', 'surface-dim': '#d7dbd4', 'on-background': '#181d18', 'on-tertiary-container': '#a4b59c', 'surface-container-highest': '#dfe4dc', 'on-tertiary-fixed': '#111f0e', 'on-tertiary': '#ffffff', 'surface-container-low': '#f0f5ed', 'tertiary-fixed-dim': '#baccb2', 'on-primary-fixed-variant': '#264e3a', 'on-tertiary-fixed-variant': '#3c4b37', 'error-container': '#ffdad6', 'background': '#f6fbf3', 'on-primary-container': '#8fbaa0', 'inverse-surface': '#2d322d', 'primary-container': '#234b37', 'surface-container-lowest': '#ffffff', 'on-secondary': '#ffffff', 'surface': '#f6fbf3', 'surface-variant': '#dfe4dc', 'secondary': '#436743', 'on-error-container': '#93000a', 'primary-fixed-dim': '#a5d0b6', 'on-secondary-container': '#476b47', 'surface-tint': '#3e6751', 'on-secondary-fixed': '#002106', 'tertiary': '#23311f', 'on-primary-fixed': '#002113' }, 'borderRadius': { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, 'spacing': { 'margin-mobile': '1.25rem', 'space-lg': '1.5rem', 'space-xs': '0.25rem', 'space-xl': '2.5rem', 'margin': '2.5rem', 'space-md': '1rem', 'gutter-mobile': '1rem', 'space-sm': '0.5rem', 'gutter': '1.5rem' }, 'fontFamily': { 'label-md': ['Inter'], 'title-md': ['Inter'], 'headline-lg': ['Playfair Display'], 'headline-md': ['Playfair Display'], 'body-lg': ['Inter'], 'display-lg': ['Playfair Display'], 'headline-lg-mobile': ['Playfair Display'], 'label-sm': ['Inter'], 'body-md': ['Inter'], 'body-sm': ['Inter'], 'headline-sm': ['Playfair Display'], 'display-lg-mobile': ['Playfair Display'] }, 'fontSize': { 'label-md': ['13px', { 'lineHeight': '18px', 'letterSpacing': '0.02em', 'fontWeight': '500' }], 'title-md': ['16px', { 'lineHeight': '24px', 'letterSpacing': '-0.005em', 'fontWeight': '600' }], 'headline-lg': ['36px', { 'lineHeight': '44px', 'letterSpacing': '-0.01em', 'fontWeight': '400' }], 'headline-md': ['24px', { 'lineHeight': '32px', 'letterSpacing': '0em', 'fontWeight': '500' }], 'body-lg': ['16px', { 'lineHeight': '26px', 'letterSpacing': '0em', 'fontWeight': '400' }], 'display-lg': ['48px', { 'lineHeight': '56px', 'letterSpacing': '-0.02em', 'fontWeight': '400' }], 'headline-lg-mobile': ['26px', { 'lineHeight': '34px', 'letterSpacing': '0em', 'fontWeight': '400' }], 'label-sm': ['11px', { 'lineHeight': '16px', 'letterSpacing': '0.06em', 'fontWeight': '600' }], 'body-md': ['14px', { 'lineHeight': '22px', 'letterSpacing': '0em', 'fontWeight': '400' }], 'body-sm': ['12px', { 'lineHeight': '18px', 'letterSpacing': '0.01em', 'fontWeight': '400' }], 'headline-sm': ['20px', { 'lineHeight': '28px', 'letterSpacing': '0em', 'fontWeight': '600' }], 'display-lg-mobile': ['32px', { 'lineHeight': '40px', 'letterSpacing': '-0.01em', 'fontWeight': '400' }] } } } };</script>
+    </head>
+    <body class="bg-surface font-body-md text-on-surface antialiased">
+        <header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_1px_8px_rgba(35,75,55,0.06)]">
+            <div class="h-20 max-w-7xl mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-gutter">
+                <div class="flex items-center gap-space-sm">
+                    <img alt="AyurSutra Logo"
+                         class="h-14 w-auto object-contain"
+                         src="/images/ayursutra-logo.png" />
+        <div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">AyurSutra</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary mt-0.5">Panchakarma &amp; Wellness</span></div></div>
+        <nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold border-b border-primary pb-1">
+            <a aria-current="page" class="transition-colors text-primary font-semibold border-b border-primary pb-1" data-path="home" href="/Home/Index">Home</a>
+            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="about-us" href="/Home/About">About Us</a>
+            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="therapies" href="/Home/Therapies">Therapies</a>
+            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="our-doctors" href="/Home/Doctors">Our Doctors</a>
+            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="contact-us" href="/Home/Contact">Contact Us</a>
+                </nav><div class="flex items-center gap-space-md">
+                    <a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-xs rounded bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors shadow-sm" data-path="login" href="/Account/Login">Login</a>
+                    <div class="flex items-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-secondary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVPZ_svKF88SQGTTlkFNNExqhBjJzbNGjWPJe_LqkPy2jV0KShj-cZUgASZzbb7JqRPnBPw29rGKaSGp8Tg1DU1EnbnL06I2oZ7BmpsRVsFUqwVektHN9P9Xe-fih3j_FmpSLA9Z50q1eEjgao1El8mSt7z_Zj8r4-VKJ2KU_pck4lsXvh9Qo5sshNZhgPuvOQYonq0pxojzUkM-99F6icl91j3sBw88qWDeNtCb63" /></div></div>
+            </div>
+        </header>
+        <main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
+            <div class="flex flex-col w-full">
+                <!-- SECTION 1: HERO SECTION -->
+                <section class="relative w-full bg-surface-bright py-space-xl lg:py-32 overflow-hidden">
+                    <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-secondary-container/40 blur-3xl pointer-events-none"></div>
+                    <div class="absolute bottom-0 -left-20 w-80 h-80 rounded-full bg-primary-fixed/20 blur-3xl pointer-events-none"></div>
+                    <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+                            <!-- Content Column -->
+                            <div class="lg:col-span-7 flex flex-col items-start z-10">
+                                <div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-secondary-container/50 text-secondary mb-space-md">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                                    <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Traditional Ayurveda • Modern Care</span>
+                                </div>
+                                <h1 class="font-display-lg text-display-lg-mobile lg:text-display-lg text-primary tracking-tight mb-space-md max-w-2xl font-normal">
+                                    Restore Your Balance, Naturally.
+                                </h1>
+                                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-space-lg leading-relaxed">
+                                    Discover the ancient wisdom of Ayurveda through personalized Panchakarma therapies, holistic clinical oversight, and unhurried wellness sanctuaries rooted in authentic Vedic sciences.
+                                </p>
+                                <div class="flex flex-wrap items-center gap-space-md w-full sm:w-auto">
+                                    <a class="inline-flex items-center justify-center px-6 py-3 rounded bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all duration-300 shadow-md hover:shadow-lg gap-2 group" data-path="therapies" href="#">
+                                        <span>Explore Therapies</span>
+                                        <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                                    </a>
+                                    <a class="inline-flex items-center justify-center px-6 py-3 rounded border border-secondary text-secondary font-label-md text-label-md hover:bg-secondary/10 transition-colors" data-path="about-us" href="#">
+                                        About AyurSutra
+                                    </a>
+                                </div>
+                                <div class="mt-space-xl pt-space-lg border-t border-outline-variant/30 flex items-center gap-space-xl text-on-surface-variant">
+                                    <div class="flex flex-col">
+                                        <span class="font-headline-sm text-headline-sm text-primary font-bold">1,200+</span>
+                                        <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Therapies Guided</span>
+                                    </div>
+                                    <div class="w-px h-8 bg-outline-variant/40"></div>
+                                    <div class="flex flex-col">
+                                        <span class="font-headline-sm text-headline-sm text-primary font-bold">100%</span>
+                                        <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Organic Herbal Oils</span>
+                                    </div>
+                                    <div class="w-px h-8 bg-outline-variant/40"></div>
+                                    <div class="flex flex-col">
+                                        <span class="font-headline-sm text-headline-sm text-primary font-bold">18+</span>
+                                        <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Vedic Formulations</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Visual Hero Column -->
+                            <div class="lg:col-span-5 relative mt-space-lg lg:mt-0">
+                                <div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl bg-surface-container">
+                                    <img class="w-full h-full object-cover" data-alt="Photorealistic peaceful luxury Ayurvedic wellness sanctuary interior with warm sunlit lighting, featuring a traditional carved wooden Droni massage table, gleaming bronze hanging Dhara pot dripping golden medicinal oil into a brass bowl, scattered fresh green neem and tulsi leaves, and warm linen drapes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiggocT1TUoBRsUsbarF_9XDhWRE2TK6BUah1aQHA7xWfN5RsUIQqoesHGcQwUdMDHbF3J_nLQfuFAuB84lpcv5l0J64WMJccfXuCJWgjC8rxvtXpeGU0WKmCdCk537jZaG6V1paJmyydj362sTXT68K3uIAbNTpuaY9lGRHsgFlkVXxdEOABleF8FNCidnZGzB8nfn3PDQjDW91g5MG1sclVMoZ5kt5OcThQSFTSq" />
+                                    <div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
+                                    <!-- Floating Accreditations Pill -->
+                                    <div class="absolute bottom-6 left-6 right-6 p-4 rounded-lg bg-surface-container-lowest/90 backdrop-blur-md shadow-lg flex items-center justify-between">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+                                                <span class="material-symbols-outlined text-xl">spa</span>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-title-md text-title-md text-primary leading-tight">Authentic Vaidya Care</h4>
+                                                <p class="font-body-sm text-body-sm text-on-surface-variant">Individual Prakriti &amp; Dosha Diagnostics</p>
+                                            </div>
+                                        </div>
+                                        <span class="material-symbols-outlined text-secondary">verified</span>
+                                    </div>
+                                </div>
+                                <!-- Decorative Floating Botanical Accent -->
+                                <div class="absolute -bottom-6 -left-6 hidden sm:flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container-lowest shadow-md">
+                                    <span class="material-symbols-outlined text-secondary text-sm">energy_savings_leaf</span>
+                                    <span class="font-label-sm text-label-sm text-on-surface-variant">100% Classical Protocols</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- SECTION 2: INTRODUCTION -->
+                <section class="w-full bg-surface py-space-xl lg:py-28 relative">
+                    <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-12 items-center">
+                            <!-- Visual Left Column -->
+                            <div class="lg:col-span-5 relative">
+                                <div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-xl">
+                                    <img class="w-full h-full object-cover" data-alt="Editorial still life photograph of handcrafted Ayurvedic apothecary botanicals, brass pestle and mortar grinding dried ashwagandha roots and fresh green herbs, surrounded by glass dropper vials with golden sesame oil and raw linen fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChdETs-Q6R3fRW7dRNWj3pFniAyQjv2j3QSeKoIchqFy0zLvVcVGnpRprVRgOquSFdrPudCUEJ-LLnnQnitfry9PUvxkkmr9ADRyfm_1LA0QjnZgDZM6sEMKTKYsIsihQRS_ejzwMlPgxn5z1izhB_bQiyB8S4OT3MJZkG_lVt68cmgsCO58cgc0gO5Yb24h9PqaAQmrInaXWJzmoyqJ7y3k64UktNOWJuL0awV6wH" />
+                                </div>
+                                <!-- Decorative geometric accent -->
+                                <div class="absolute -top-4 -left-4 w-24 h-24 border-2 border-secondary/30 rounded-xl -z-10 hidden sm:block"></div>
+                            </div>
+                            <!-- Narrative Right Column -->
+                            <div class="lg:col-span-7 flex flex-col justify-center">
+                                <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold mb-space-xs">
+                                    Holistic Philosophy
+                                </span>
+                                <h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary tracking-tight mb-space-md">
+                                    A Journey Towards Holistic Wellness
+                                </h2>
+                                <p class="font-body-lg text-body-lg text-on-surface-variant mb-space-md leading-relaxed">
+                                    In Ayurvedic wisdom, vibrant health is not merely the absence of disease, but a luminous equilibrium of mind, body, senses, and spirit. When your constitutional doshas—<strong class="text-primary font-medium">Vata, Pitta, and Kapha</strong>—fall out of rhythm due to systemic stressors and toxic build-up (Ama), physiological harmony dissolves.
+                                </p>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed">
+                                    AyurSutra bridges these timeless principles with clean, serene care coordination. Our classical Panchakarma detox regimes are calibrated to the patient’s distinctive cellular constitution, purging deep-seated physiological impurities and awakening the body’s innate regenerative potency.
+                                </p>
+                                <!-- 3 Dosha Mini-Badges -->
+                                <div class="grid grid-cols-3 gap-3 mb-space-lg">
+                                    <div class="p-3 rounded-lg bg-surface-container-low text-center">
+                                        <span class="font-label-md text-label-md font-semibold text-primary block">VATA</span>
+                                        <span class="font-body-sm text-body-sm text-outline">Movement &amp; Air</span>
+                                    </div>
+                                    <div class="p-3 rounded-lg bg-surface-container-low text-center">
+                                        <span class="font-label-md text-label-md font-semibold text-primary block">PITTA</span>
+                                        <span class="font-body-sm text-body-sm text-outline">Metabolism &amp; Fire</span>
+                                    </div>
+                                    <div class="p-3 rounded-lg bg-surface-container-low text-center">
+                                        <span class="font-label-md text-label-md font-semibold text-primary block">KAPHA</span>
+                                        <span class="font-body-sm text-body-sm text-outline">Structure &amp; Water</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <a class="inline-flex items-center gap-2 text-primary font-title-md text-title-md hover:text-secondary transition-colors group" data-path="about-us" href="#">
+                                        <span>Learn more about our therapeutic philosophy</span>
+                                        <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">trending_flat</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- SECTION 3: FEATURED PANCHAKARMA THERAPIES -->
+                <section class="w-full bg-surface-container-low py-space-xl lg:py-28">
+                    <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+                        <!-- Section Header -->
+                        <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+                            <div>
+                                <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold block mb-1">
+                                    Rejuvenation &amp; Purification
+                                </span>
+                                <h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary tracking-tight">
+                                    Explore Our Therapies
+                                </h2>
+                            </div>
+                            <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                                Ancient Panchakarma rituals tailored to dislodge toxicity, calm the autonomic nervous system, and restore elemental harmony.
+                            </p>
+                        </div>
+                        <!-- 4 Therapy Cards Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                            <!-- Card 1: Abhyanga -->
+                            <div class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
+                                <div class="relative h-48 w-full overflow-hidden bg-surface-container">
+                                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Ayurvedic Abhyanga therapy in action: experienced therapist hands systematically massaging warm medicated herbal oil on a patient back on a teak droni table, with warm serene lighting and botanical elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuTQpOsO0Tm7OAa9U8WOoTeDhEV7oUoST9gdCJvLuea1dXpXF7fDBTdbtZv-xMFS49oMj4g0hzap8ZLc28umez8NGBu7Y7EUB1OaqMxXSC9IjNHV5cSnvgZ6wdmK2uIKPt8bD91iew0qJTFSnENdyDBZUCmEWo4rUtBZYE8jJEkf0fzDhQnP20q15yROOg8lEeeT08b6TGqKexPtnK31oronR3g673lgmntHvBT4AQ" />
+                                    <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm">
+                                        60–90 Mins
+                                    </div>
+                                </div>
+                                <div class="p-5 flex flex-col flex-1">
+                                    <span class="font-label-sm text-label-sm text-secondary uppercase font-semibold mb-1">Oleation Therapy</span>
+                                    <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Abhyanga</h3>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-4 flex-1 leading-relaxed">
+                                        Traditional full-body warm herbal oil synchronized massage designed to stimulate micro-circulation, tone muscles, and dissolve tissue fatigue.
+                                    </p>
+                                    <a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary group-hover:text-secondary transition-colors pt-2 border-t border-surface-container" data-path="therapies" href="#">
+                                        <span>View Details</span>
+                                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Card 2: Shirodhara -->
+                            <div class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
+                                <div class="relative h-48 w-full overflow-hidden bg-surface-container">
+                                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Shirodhara Ayurvedic treatment showing an ornate brass vessel suspended over a relaxed patient forehead, pouring a precise calm stream of warmed herbal oil over the third eye center in a dimly lit meditative room." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz8e5_yxjcyaYi_25RiH8v_eUC7erRLq8MhMLcOZvrG138Qsp0uIc0teyE7Qo9FMcsGjkaonNOZfs1tCSERwHmYjeW--V_3d6faSRb8W-11iqMDc5EZbrl-T0iKYjHRUdw83aIkxsBWwRdMVJH9pnldGl41SfdLrVmVCpT049Ori7qFAGk-bS8gWAFWfz1T6Rm2P-kY0OIRDtWCi0lTcnQJ8F53yrPG30UbQmDxl8I" />
+                                    <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm">
+                                        45–60 Mins
+                                    </div>
+                                </div>
+                                <div class="p-5 flex flex-col flex-1">
+                                    <span class="font-label-sm text-label-sm text-secondary uppercase font-semibold mb-1">Neuro-Sensory</span>
+                                    <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Shirodhara</h3>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-4 flex-1 leading-relaxed">
+                                        Gentle continuous stream of warm medicated herbal oil poured rhythmic over the forehead to soothe mental stress, enhance sleep, and quiet neurological agitation.
+                                    </p>
+                                    <a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary group-hover:text-secondary transition-colors pt-2 border-t border-surface-container" data-path="therapies" href="#">
+                                        <span>View Details</span>
+                                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Card 3: Basti -->
+                            <div class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
+                                <div class="relative h-48 w-full overflow-hidden bg-surface-container">
+                                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Traditional Ayurvedic herbal preparation with warm decoctions in earthenware pots, freshly boiled medicinal herbal extracts, sesame oils, and measuring apparatus on an antique wooden clinical counter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ1z5x_fnVBpPWlXjbs_ocSDMTQC7xq2NwUl0Fp7ORn_ZlTS_SUMjaRKjZfWPH-p-F9-ZElB6MLBl3sPAqez8fnHupctw684l2Z1pGVYG14tWGjmLC6xXf5IeGY_KmIe8WPfs9xRuRiDoZ-nqKdTHaAj2oAOCyF09wtnXakI1KlefR02Ies6m2EPQlVe_LFOhA-kivNjsctUaZ8kma8cQXnHNiMjAHqi7KRc4VisuM" />
+                                    <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm">
+                                        45–75 Mins
+                                    </div>
+                                </div>
+                                <div class="p-5 flex flex-col flex-1">
+                                    <span class="font-label-sm text-label-sm text-secondary uppercase font-semibold mb-1">Deep Purification</span>
+                                    <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Basti Karma</h3>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-4 flex-1 leading-relaxed">
+                                        Targeted classical medicated herbal enema therapies addressing the primary seat of Vata to promote deep gastrointestinal renewal and cellular detox.
+                                    </p>
+                                    <a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary group-hover:text-secondary transition-colors pt-2 border-t border-surface-container" data-path="therapies" href="#">
+                                        <span>View Details</span>
+                                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Card 4: Swedana -->
+                            <div class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
+                                <div class="relative h-48 w-full overflow-hidden bg-surface-container">
+                                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Ayurvedic Swedana herbal steam chamber crafted from polished seasoned cedar wood, soft aromatic steam billowing gently around a quiet luxury treatment chamber with eucalyptus and lemongrass leaves nearby." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5m1RsfsNbLw6ay8sHvCUecp8YLizdvAiv_B_2icsdlZu0BgK8YV8mEKq_mTgOWIjJubCpi3jsXvVGGWl50-J42lCDDfmQoKQ24SoqPRvhXR6VHJK_YVnK-464DkWEBIgsE2gzhQ4K-k7RUZrJjY86V0irEq_xQmO4xCqeRaeTrzyt2IjLbfVldTaUdp4U5dUeFJUXTumhZD00sHX9AwqpgULuXzobZsaz1pzpepqu" />
+                                    <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm">
+                                        30–45 Mins
+                                    </div>
+                                </div>
+                                <div class="p-5 flex flex-col flex-1">
+                                    <span class="font-label-sm text-label-sm text-secondary uppercase font-semibold mb-1">Sudation Therapy</span>
+                                    <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Swedana</h3>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-4 flex-1 leading-relaxed">
+                                        Herbal medicated steam session inducing gentle sweat to liquefy channel impurities, dilate micro-capillaries, and clear persistent stiffness.
+                                    </p>
+                                    <a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary group-hover:text-secondary transition-colors pt-2 border-t border-surface-container" data-path="therapies" href="#">
+                                        <span>View Details</span>
+                                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- SECTION 4: WHY CHOOSE AYURSUTRA -->
+                <section class="w-full bg-surface py-space-xl lg:py-28">
+                    <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+                        <div class="text-center max-w-2xl mx-auto mb-space-xl">
+                            <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold block mb-1">
+                                Clinical Excellence
+                            </span>
+                            <h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary tracking-tight mb-2">
+                                Care Rooted in Tradition
+                            </h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                Integrating ancient Ayurvedic heritage with sophisticated, organized clinical scheduling and patient management.
+                            </p>
+                        </div>
+                        <!-- 4 Pillars Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                            <!-- Pillar 1 -->
+                            <div class="p-6 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col items-start">
+                                <div class="w-12 h-12 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center mb-space-md shadow-sm">
+                                    <span class="material-symbols-outlined text-2xl">auto_stories</span>
+                                </div>
+                                <h3 class="font-title-md text-title-md text-primary mb-2">Traditional Ayurvedic Approach</h3>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                    Strict adherence to the classical Ayurvedic treatises (Charaka &amp; Sushruta Samhita) utilizing authentic, unadulterated botanical formulations.
+                                </p>
+                            </div>
+                            <!-- Pillar 2 -->
+                            <div class="p-6 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col items-start">
+                                <div class="w-12 h-12 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center mb-space-md shadow-sm">
+                                    <span class="material-symbols-outlined text-2xl">vital_signs</span>
+                                </div>
+                                <h3 class="font-title-md text-title-md text-primary mb-2">Personalized Treatment Plans</h3>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                    Exacting Nadi Pariksha (subtle pulse reading) and comprehensive constitution analysis ensure tailored, adaptive Panchakarma regimens.
+                                </p>
+                            </div>
+                            <!-- Pillar 3 -->
+                            <div class="p-6 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col items-start">
+                                <div class="w-12 h-12 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center mb-space-md shadow-sm">
+                                    <span class="material-symbols-outlined text-2xl">clinical_notes</span>
+                                </div>
+                                <h3 class="font-title-md text-title-md text-primary mb-2">Experienced Vaidyas</h3>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                    Guided exclusively by certified BAMS and MD Ayurvedic physicians with decades of hands-on institutional clinical mastery.
+                                </p>
+                            </div>
+                            <!-- Pillar 4 -->
+                            <div class="p-6 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col items-start">
+                                <div class="w-12 h-12 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center mb-space-md shadow-sm">
+                                    <span class="material-symbols-outlined text-2xl">calendar_month</span>
+                                </div>
+                                <h3 class="font-title-md text-title-md text-primary mb-2">Organized Patient Care</h3>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                    Intelligent digital scheduling, seamless therapy room coordination, dietary compliance tracking, and continuous post-cure monitoring.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- SECTION 5: MEET OUR DOCTORS -->
+                <section class="w-full bg-surface-container-low py-space-xl lg:py-28">
+                    <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+                        <div class="text-center max-w-2xl mx-auto mb-space-xl">
+                            <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold block mb-1">
+                                Our Practitioners
+                            </span>
+                            <h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary tracking-tight mb-2">
+                                Meet Our Ayurvedic Experts
+                            </h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                Seasoned Vaidyas committed to personalizing your path to natural wellness and systemic rejuvenation.
+                            </p>
+                        </div>
+                        <!-- 3 Doctors Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                            <!-- Doctor 1 -->
+                            <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+                                <div class="relative h-72 w-full bg-surface-container overflow-hidden">
+                                    <img class="w-full h-full object-cover" data-alt="Professional warm portrait of Dr. Anjali Sharma, an Indian female senior Ayurvedic physician in her early forties with dignified demeanor, wearing refined off-white linen attire with a subtle stethoscope and botanical clinic backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtCdX0UW1CwZtVEsOunypgXbmOCD3pL2hdjQSwKZnQcdVpuNp1kxaX-PU1vzh8Cbd-0rbnMyjvCz8y9g13QFEJ7KNzK7zzTrmPl9kvVVJr9MZfrfPQmDgRNkMgOE_5Yi_j6KYgbKHFz9_LrI0530odEAdJE4XJhDkIjv8XKdW-a8IYA1UpJvTBb1l1QNotwN9cSD6SZlXQdPcqTicE3HDRdqiLi1kW8Y7DjPhjBzDE" />
+                                    <div class="absolute bottom-3 left-3 px-3 py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm">
+                                        15+ Years Experience
+                                    </div>
+                                </div>
+                                <div class="p-6 flex flex-col flex-1">
+                                    <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Dr. Anjali Sharma</h3>
+                                    <span class="font-label-md text-label-md text-secondary mb-2">BAMS, MD (Ayurveda)</span>
+                                    <p class="font-body-sm text-body-sm text-outline mb-4">Chief Physician &amp; Panchakarma Specialist</p>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-6 flex-1 leading-relaxed">
+                                        Specializes in chronic autoimmune imbalances and intensive restorative Panchakarma detoxification cycles.
+                                    </p>
+                                    <a class="w-full py-2.5 px-4 rounded text-center border border-secondary text-secondary hover:bg-secondary/10 font-label-md text-label-md transition-colors" data-path="contact-us" href="#">
+                                        Book Consultation
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Doctor 2 -->
+                            <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+                                <div class="relative h-72 w-full bg-surface-container overflow-hidden">
+                                    <img class="w-full h-full object-cover" data-alt="Serene portrait of Dr. Rajesh Nambiar, a distinguished Indian male senior Ayurvedic doctor in his late forties with warm kind eyes, traditional neat linen kurta, consulting in a wood-paneled Ayurvedic wellness study." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlYRrkb3yDPhgiejgt9ikRSwzMT4H3LprsjYB5hgz4zNTM4-kh0WKiB4wIGXgfevbXZyqqDfX68bF8QhzLeZ715Z3rQ8qjBGOsPQjTF31YJSPKv-JTKB_6UqWIKm9rtRnjhyli2hev8VWKj2GSvqqG2WhYBqpay_2-D8-79x0iVTH1kWsISQXU3F_KbzWGLDxrXaPaG3Huggu1zv7UwISjtSlIGBtdAggp0VJrp19z" />
+                                    <div class="absolute bottom-3 left-3 px-3 py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm">
+                                        12+ Years Experience
+                                    </div>
+                                </div>
+                                <div class="p-6 flex flex-col flex-1">
+                                    <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Dr. Rajesh Nambiar</h3>
+                                    <span class="font-label-md text-label-md text-secondary mb-2">BAMS</span>
+                                    <p class="font-body-sm text-body-sm text-outline mb-4">Senior Vaidya &amp; Nadi Pariksha Expert</p>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-6 flex-1 leading-relaxed">
+                                        Renowned master of classical pulse diagnosis, pinpointing elemental organ imbalances and metabolic toxicity.
+                                    </p>
+                                    <a class="w-full py-2.5 px-4 rounded text-center border border-secondary text-secondary hover:bg-secondary/10 font-label-md text-label-md transition-colors" data-path="contact-us" href="#">
+                                        Book Consultation
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Doctor 3 -->
+                            <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+                                <div class="relative h-72 w-full bg-surface-container overflow-hidden">
+                                    <img class="w-full h-full object-cover" data-alt="Portrait of Dr. Priya Varma, an energetic and mindful South Asian female Ayurvedic consultant in her late thirties, smiling gently in front of a shelf filled with glass herb jars and Ayurvedic reference texts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG6_Fradj-Mvl0qMKLHFL6nM1PtPA29WQg7aVLlzWeXAixNuurtqIBQV1pH48kA1bRu8h0hKlPwKY_keUv7wfoGttEHjIvY8AlDrhWukQSWFacxXfGSB98vIy9rBaX5kPKw39Y0bMoCwH4BLb6GKsx57I-tuiX-v1x3WPhRxIrndcYS8FAhNXY3M5l9-DSjB5ZC3a-RZuhA2XM3uQTZLuJpGDOFtHaFlTSEKcYs5Kc" />
+                                    <div class="absolute bottom-3 left-3 px-2 py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm">
+                                        9+ Years Experience
+                                    </div>
+                                </div>
+                                <div class="p-6 flex flex-col flex-1">
+                                    <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Dr. Priya Varma</h3>
+                                    <span class="font-label-md text-label-md text-secondary mb-2">BAMS, MS (Ayurveda)</span>
+                                    <p class="font-body-sm text-body-sm text-outline mb-4">Holistic Diet &amp; Lifestyle Consultant</p>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-6 flex-1 leading-relaxed">
+                                        Integrates Pathya-Apathya dietary science and circadian lifestyle protocols to maintain post-treatment vitality.
+                                    </p>
+                                    <a class="w-full py-2.5 px-4 rounded text-center border border-secondary text-secondary hover:bg-secondary/10 font-label-md text-label-md transition-colors" data-path="contact-us" href="#">
+                                        Book Consultation
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- SECTION 6: PANCHAKARMA EXPERIENCE BANNER -->
+                <section class="relative w-full py-28 lg:py-36 overflow-hidden">
+                    <div class="absolute inset-0 bg-cover bg-center" data-alt="Breathtaking panoramic wide angle view of an authentic luxury Ayurvedic treatment sanctuary in Rishikesh with soft morning mist, brass urli bowl filled with floating pink lotus petals, meditative singing bowl, and gentle golden dawn light streaming through carved stone arches." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbBmsdYCu3dFaLN9Iv81RPopacIkM3K82xOl3P0E6mGZgNM4NzkHEmUIySx_Z05x5hxl9NwR3bUsdvF8gSGclvyOkJ6MMTyLBIdE2tB46m3APb47pxl7A3Udeapwu8qE6wG0OhzWwzEW_OvTI3NlZhoD9KtiMY_tVIUqCmEzWA5_1iuvcy8JRwdHnadehymYrWlFHsiE7DyDIySYKNcj973buHDJzIzDfoAuHppeYR')"></div>
+                    <div class="absolute inset-0 bg-primary/80 backdrop-blur-sm"></div>
+                    <div class="relative max-w-5xl mx-auto px-margin-mobile lg:px-margin text-center text-on-primary">
+                        <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed mb-space-sm inline-block">
+                            The Sanctuary Immersion
+                        </span>
+                        <h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-primary tracking-tight mb-space-md max-w-3xl mx-auto">
+                            Reconnect With Your Natural Balance
+                        </h2>
+                        <p class="font-body-lg text-body-lg text-on-primary/90 max-w-2xl mx-auto mb-space-lg leading-relaxed">
+                            Stepping into our Panchakarma retreat means slowing down to nature’s tempo. From dawn yoga kriyas to therapeutic herbal baths, each detail of your stay is synchronized to restore clarity, ease somatic tension, and ignite metabolic vigor.
+                        </p>
+                        <div class="inline-flex items-center gap-space-md p-2 rounded-full bg-surface-container-lowest/10 backdrop-blur-md px-6 py-3 border border-on-primary/20">
+                            <span class="material-symbols-outlined text-primary-fixed">self_improvement</span>
+                            <span class="font-title-md text-title-md text-on-primary">Individualized Inpatient &amp; Outpatient Retreatment Protocols</span>
+                        </div>
+                    </div>
+                </section>
+                <!-- SECTION 7: FINAL CALL TO ACTION -->
+                <section class="w-full bg-primary-container py-space-xl lg:py-24 text-on-primary relative">
+                    <div class="max-w-4xl mx-auto px-margin-mobile lg:px-margin text-center">
+                        <h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-primary tracking-tight mb-space-sm">
+                            Begin Your Wellness Journey Today
+                        </h2>
+                        <p class="font-body-lg text-body-lg text-on-primary/80 max-w-xl mx-auto mb-space-lg leading-relaxed">
+                            Explore our therapies and discover a more balanced, grounded approach to your health. Schedule a preliminary dosha evaluation with our lead Vaidyas.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-space-md">
+                            <a class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded bg-surface-container-lowest text-primary font-title-md text-title-md hover:bg-surface-bright transition-all shadow-md" data-path="therapies" href="#">
+                                Explore Therapies
+                            </a>
+                            <a class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded border border-primary-fixed text-primary-fixed font-title-md text-title-md hover:bg-primary/40 transition-colors" data-path="contact-us" href="#">
+                                Schedule Consultation
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>    </main>
+            <footer class="w-full bg-surface-container-low shadow-[0_-1px_6px_rgba(35,75,55,0.03)] mt-space-xl"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-space-xl"><div><div class="flex items-center gap-space-sm mb-space-sm"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">AyurSutra</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">An authentic Panchakarma retreat and therapeutic clinical sanctuary dedicated to traditional Vedic healing, physiological renewal, and profound inner harmony.</p><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-sm">verified</span><span class="font-label-sm text-label-sm text-secondary uppercase">NABH Accredited Center</span></div></div><div><h4 class="font-title-md text-title-md text-primary mb-space-sm">Quick Navigation</h4><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="home" href="#">Home Overview</a></li><li><a class="hover:text-primary transition-colors" data-path="about-us" href="#">About the Sanctuary</a></li><li><a class="hover:text-primary transition-colors" data-path="our-doctors" href="#">Vaidya Specialists</a></li><li><a class="hover:text-primary transition-colors" data-path="contact-us" href="#">Appointments &amp; Stay</a></li><li><a class="hover:text-primary transition-colors" data-path="login" href="#">Patient Portal Login</a></li></ul></div><div><h4 class="font-title-md text-title-md text-primary mb-space-sm">Classical Therapies</h4><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><span class="text-on-surface-variant">Abhyanga Herbal Oleation</span></li><li><span class="text-on-surface-variant">Shirodhara Medicated Stream</span></li><li><span class="text-on-surface-variant">Virechana Detoxification</span></li><li><span class="text-on-surface-variant">Basti Herbal Enema Series</span></li><li><span class="text-on-surface-variant">Nasya Sinus Rejuvenation</span></li></ul></div><div><h4 class="font-title-md text-title-md text-primary mb-space-sm">Sanctuary Contact</h4><div class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><p class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-secondary text-sm mt-0.5">location_on</span><span>108 Vedic Grove, Ayurvedic Valley, Rishikesh, Uttarakhand</span></p><p class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-sm">call</span><span>+91 (0) 135 243 8900</span></p><p class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-sm">mail</span><span>care@ayursutra-wellness.org</span></p></div></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><p>© 2025 AyurSutra Panchakarma Institute. All sacred rights reserved.</p><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" href="#">Sanctuary Ethics</a><a class="hover:text-primary transition-colors" href="#">Patient Privacy</a><a class="hover:text-primary transition-colors" href="#">Clinical Accreditations</a></div></div></div></footer>
+        </body>
+    </html>
