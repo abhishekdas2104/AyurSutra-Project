@@ -361,3 +361,24 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+
+
+# Visual Studio files
+.vs/
+[Bb]in/
+[Oo]bj/
+
+# User-specific files
+*.user
+*.suo
+
+# Build files
+Debug/
+Release/
+
+# Sensitive configuration
+appsettings.Development.json
+
+# Publish profiles
+Properties/PublishProfiles/
